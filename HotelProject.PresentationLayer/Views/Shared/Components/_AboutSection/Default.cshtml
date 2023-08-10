@@ -1,0 +1,60 @@
+﻿@model HotelProject.Entitylayer.Concrete.HotelResume
+@{
+    Layout = null;
+}
+
+<section class="about padding-top padding-bottom about--shape">
+    <div class="container">
+        <div class="about__wrapper">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="about__content" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="100">
+
+                        <div class="common-header">
+                            <p class="subtitle">Welcome to tavern</p>
+                            <h2>@Model.HotelTitle</h2>
+                        </div>
+                        <p>
+                           @Model.HotelDescription
+                        </p>
+                        <div class="row g-4 my-5">
+                            <div class="col-xl-6">
+                                <div class="about__item">
+                                    <div class="about__item-inner">
+                                        <div class="about__item-thumb">
+                                            <img src="@Model.HotelImage" alt="About Icon" class="img-fluid radius-image mt-4" />
+                                        </div>
+                                        <div class="about__item-content">
+                                            <h5>Best Rate Guarantee</h5>
+                                            <p>Strategy experience and an lytical expertise.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="about__item">
+                                    <div class="about__item-inner">
+                                        <div class="about__item-thumb">
+                                            <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/about/icon/2.png" alt="About Icon">
+                                        </div>
+                                        <div class="about__item-content">
+                                            <h5>No Booking Fee</h5>
+                                            <p>Strategy experience and an lytical expertise.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="custom-btn"><span>Explore Now</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about__image" data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="about__image-lg"><img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/about/1.png" alt="About image"></div>
+                        <div class="about__image-sm"><img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/about/2.png" alt="About image"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

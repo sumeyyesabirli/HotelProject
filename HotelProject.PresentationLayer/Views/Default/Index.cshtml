@@ -1,0 +1,68 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tavern- Resort and Hotel Booking HTMl Template</title>
+  <link rel="shortcut icon" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/aos.css">
+  <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/all.min.css">
+  <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/lightcase.css">
+  <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/flatpickr.min.css">
+  <!-- main css for template -->
+  <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/style.css">
+</head>
+<body>
+  <!-- ===============>> Preloader start here <<================= -->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+  <!-- ===============>> Preloader end here <<================= -->
+  <!-- ========== Header Section Starts Here========== -->
+    @await Component.InvokeAsync("_NavbarPartial")
+  <!-- ========== Header Section Ends Here========== -->
+  <!-- ========== Hero Section start Here========== -->
+    @await Component.InvokeAsync("_HotelSlidePartial");
+  <!-- ========== Hero Section Ends Here========== -->
+  <!-- ========== Feature Section start Here========== -->
+    @await Component.InvokeAsync("_FeatureSection");
+  <!-- ========== Feature Section Ends Here========== -->
+  <!-- ========== Room Section start Here========== -->
+    @await Component.InvokeAsync("_RoomSection");
+  <!-- ========== Room Section ends Here========== -->
+  <!-- ========== About Section start Here========== -->
+    @await Component.InvokeAsync("_AboutSection");
+  <!-- ========== About Section ends Here========== -->
+  <!-- ========== Service Section start Here========== -->
+    @await Component.InvokeAsync("_ServiceSection");
+  <!-- ========== Service Section ends Here========== -->
+  <!-- ========== Footer Section start Here========== -->
+    @await Component.InvokeAsync("_FooterSection");
+  <!-- ========== Footer Section ends Here========== -->
+  <!-- scrollToTop start here -->
+  <a href="#" class="scrollToTop"><i class="fa-solid fa-arrow-up"></i></a>
+  <!-- scrollToTop ending here -->
+  <!-- vendor plugins -->
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/jquery-3.6.0.min.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/imagesloaded.pkgd.min.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/isotope.pkgd.min.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/flatpickr.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/all.min.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/swiper-bundle.min.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/aos.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/jquery.nice-select.min.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/countdown.min.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/lightcase.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/purecounter_vanilla.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/kursor.min.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/progressbar.min.js"></script>
+  <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/custom.js"></script>
+</body>
+</html>

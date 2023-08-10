@@ -1,0 +1,111 @@
+﻿@model List<HotelProject.Entitylayer.Concrete.RoomDetail>
+@{
+    Layout = null;
+}
+
+<section class="room padding-top padding-bottom bg--section-color">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+            <div class="section-header__content">
+                <h2>Tavern Hotel Best Rooms & Suites.</h2>
+                <p>
+                    Continually productize compelling quality for packed in business consulting elated
+                    Setting up to website and creating pages.
+                </p>
+            </div>
+        </div>
+        <div class="room__wrapper">
+            <div class="row g-4">
+                @foreach (var item in Model){
+                <div class="col-xl-4 col-md-6">
+                    <div class="room__item room__item--style1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="room__item-inner">
+                            <div class="room__item-thumb">
+                                <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/room/home1/1.png" alt="room image">
+                            </div>
+                            <div class="room__item-content">
+                                <div class="room__item-header">
+                                    <div class="room__item-name">
+                                        <ul class="rating">
+                                            <li class="rating__star"><i class="fa-solid fa-star"></i></li>
+                                            <li class="rating__star"><i class="fa-solid fa-star"></i></li>
+                                            <li class="rating__star"><i class="fa-solid fa-star"></i></li>
+                                            <li class="rating__star"><i class="fa-solid fa-star"></i></li>
+                                            <li class="rating__star"><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                            <h3><a href="room-details.html">@item.RoomDetailsTitle</a></h3>
+                                        <p>Available room</p>
+                                    </div>
+
+                                    <div class="room__item-price">
+                                        <h3>$220</h3>
+                                        <p>Per Night</p>
+                                    </div>
+                                </div>
+                                <div class="room__item-body">
+                                    <p>Continually productize compelling quality packed elated productize compelling quality.</p>
+                                    <ul class="room__feature">
+                                        <li class="room__feature-item">
+                                            <div class="room__feature-icon">
+                                                <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/room/icon/1.png" alt="feature icon">
+                                            </div>
+                                            <div class="room__feature-text">
+                                                <p>4 Person</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="room__feature-item">
+                                            <div class="room__feature-icon">
+                                                <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/room/icon/2.png" alt="feature icon">
+                                            </div>
+                                            <div class="room__feature-text">
+                                                <p>King bed</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="room__feature-item">
+                                            <div class="room__feature-icon">
+                                                <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/room/icon/3.png" alt="feature icon">
+                                            </div>
+                                            <div class="room__feature-text">
+                                                <p>free wifi</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="room__feature-item">
+                                            <div class="room__feature-icon">
+                                                <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/room/icon/4.png" alt="feature icon">
+                                            </div>
+                                            <div class="room__feature-text">
+                                                <p>36 sqm</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="room__feature-item">
+                                            <div class="room__feature-icon">
+                                                <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/room/icon/5.png" alt="feature icon">
+                                            </div>
+                                            <div class="room__feature-text">
+                                                <p>Shower</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="room__feature-item">
+                                            <div class="room__feature-icon">
+                                                <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/room/icon/6.png" alt="feature icon">
+                                            </div>
+                                            <div class="room__feature-text">
+                                                <p>Breakfast</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="custom-btn"><span>Booking Now</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>}
+            </div>
+        </div>
+    </div>
+</section>

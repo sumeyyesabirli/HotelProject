@@ -1,0 +1,61 @@
+﻿@model List<HotelResume>
+@{
+    Layout = null;
+}
+
+<section class="about padding-top padding-bottom about--shape">
+    <div class="container">
+        <div class="about__wrapper">
+            <div class="row flex-lg-row-reverse align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    @foreach (var item in Model)
+                    {
+                    <div class="about__content" data-aos="fade-up" data-aos-duration="1000">
+
+                        <div class="common-header">
+                            <p class="subtitle">Özüm Hotel'e Hoşgeldiniz</p>
+                            <h2>@item.HotelTitle</h2>
+                        </div>
+                        <p>
+                           @item.HotelDescription
+                        </p>
+           
+                        <ul class="funfact__list my-4">
+                            <li class="funfact__item">
+                              
+                                <div class="funfact__item-content">
+                                    <h3><span>200</span>+</h3>
+                                    <p>Available Rooms</p>
+                                </div>
+                            </li>
+                            <li class="funfact__item">
+                           
+                                <div class="funfact__item-content">
+                                    <h3><span>400</span>+</h3>
+                                    <p>Staff Members</p>
+                                </div>
+                            </li>
+                            <li class="funfact__item">
+                              
+                                <div class="funfact__item-content">
+                                    <h3><span>240</span>k</h3>
+                                    <p>Served Clients</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="custom-btn"><span>Explore Now</span></a>
+                    </div>
+                    }
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="about__image" data-aos="fade-up-right" data-aos-duration="1000">
+                        <img src="~/Images/Image1.jpg" alt="About image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
