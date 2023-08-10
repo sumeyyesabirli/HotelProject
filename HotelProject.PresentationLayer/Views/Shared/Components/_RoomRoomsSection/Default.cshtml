@@ -1,0 +1,104 @@
+﻿@model List<HotelProject.Entitylayer.Concrete.RoomDetail>
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<section class="room padding-top padding-bottom">
+    <div class="container">
+        <div class="room__wrapper">
+            <div class="row g-5">
+                 @foreach (var item in Model)
+                 {
+                <div class="col-12">
+                    <div class="room__item room__item--style4">
+                        <div class="room__item-inner">
+                            <div class="room__item-thumb">
+                                <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/room/style4/1.png" alt="room image">
+                            </div>
+                            <div class="room__item-content">
+                                <div class="room__item-header">
+                                    <div class="room__item-name">
+                                        <ul class="rating">
+                                            <li class="rating__star"><i class="fa-solid fa-star"></i></li>
+                                            <li class="rating__star"><i class="fa-solid fa-star"></i></li>
+                                            <li class="rating__star"><i class="fa-solid fa-star"></i></li>
+                                            <li class="rating__star"><i class="fa-solid fa-star"></i></li>
+                                            <li class="rating__star"><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                            <h3><a href="room-details.html">@item.RoomDetailsTitle</a></h3>
+                                        <p>Available room</p>
+                                    </div>
+
+                                    <div class="room__item-price">
+                                        <h3>$220</h3>
+                                        <p>Per Night</p>
+                                    </div>
+                                </div>
+                                <div class="room__item-body">
+                                    <p>Continually productize compelling quality packed elated productize compelling quality.</p>
+                                    <ul class="room__feature">
+                                        <li class="room__feature-item">
+                                            <div class="room__feature-icon">
+                                                <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/room/icon/1.png" alt="feature icon">
+                                            </div>
+                                            <div class="room__feature-text">
+                                                <p>4 Person</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="room__feature-item">
+                                            <div class="room__feature-icon">
+                                                <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/room/icon/2.png" alt="feature icon">
+                                            </div>
+                                            <div class="room__feature-text">
+                                                <p>King bed</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="room__feature-item">
+                                            <div class="room__feature-icon">
+                                                <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/room/icon/3.png" alt="feature icon">
+                                            </div>
+                                            <div class="room__feature-text">
+                                                <p>free wifi</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="room__feature-item">
+                                            <div class="room__feature-icon">
+                                                <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/room/icon/4.png" alt="feature icon">
+                                            </div>
+                                            <div class="room__feature-text">
+                                                <p>36 sqm</p>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                    <a href="#" class="custom-btn"><span>Booking Now</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>}
+
+               
+            </div>
+            <div class="mt-5 text-center">
+                <nav aria-label="Room listing Pagination">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <span class="page-link"><i class="fa-solid fa-angle-left"></i></span>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active" aria-current="page">
+                            <span class="page-link">2</span>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>

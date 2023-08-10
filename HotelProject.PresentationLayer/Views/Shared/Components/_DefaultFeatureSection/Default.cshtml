@@ -1,0 +1,37 @@
+﻿@model List<HotelProject.Entitylayer.Concrete.RoomDetail>
+
+
+<section class="feature padding-top padding-bottom">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+            <div class="section-header__content">
+                <h2>Tavern Hotel Your Excellent Choice For Vacation.</h2>
+                <p>
+                    Continually productize compelling quality for packed in business consulting elated
+                    Setting up to website and creating pages.
+                </p>
+            </div>
+        </div>
+        <div class="feature__wrapper">
+
+            <div class="row g-4">
+                @foreach (var item in Model)
+                {
+                    <div class="col-xl-3 col-md-6">
+                        <div class="feature__item" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="feature__item-inner">
+                                <div class="feature__item-thumb">
+                                    <img src="@item.ImageUrl" alt="" class="img-fluid radius-image mt-4" />
+                                </div>
+                                <div class="feature__item-content">
+                                    <h3>@item.RoomDetailsTitle</h3>
+                                    <p>24 Hours Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
