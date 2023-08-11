@@ -1,4 +1,4 @@
-﻿@model List<HotelProject.Entitylayer.Concrete.HotelResume>
+﻿@model List<HotelProject.Entitylayer.Concrete.Service>
 @{
     Layout = null;
 }
@@ -19,61 +19,63 @@
             <div class="service__slider swiper">
                 <div class="swiper-wrapper">
                     @foreach (var item in Model)
-                    {                   
+                    {
+                        @item.ServiceTitle
                     
-                    <div class="swiper-slide">
-                        <div class="service__item1">
-                            <div class="service__item1-inner">
-                                <div class="service__item1-thumb">
-                                    <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/service/1.png" alt="service image">
-                                </div>
-                                <div class="service__item1-content">
-                                    <div class="common-header">
-                                        <p class="subtitle">Experience For The Senses</p>
-                                        <h3>
-                                            Relaxing Moment At Spa
-                                            Center
-                                        </h3>
-                                    </div>
-                                    <p>
-                                        Continually productize compelling quality for packed in consulting
-                                        productize compelling quality for all packed in with growth from
-                                        Setting up to website and creating pages.
-                                    </p>
-                                    <ul class="service__aminities">
-                                        <li class="service__aminities-item">
-                                            <div class="service__aminities-name">
-                                                <span><i class="fa-regular fa-circle-check"></i></span>
-                                                <h5>Facial Care</h5>
-                                            </div>
-                                            <p class="service__aminities-value">
-                                                30 minutes/ per day
-                                            </p>
-                                        </li>
-                                        <li class="service__aminities-item">
-                                            <div class="service__aminities-name">
-                                                <span><i class="fa-regular fa-circle-check"></i></span>
-                                                <h5>Body Massage</h5>
-                                            </div>
-                                            <p class="service__aminities-value">
-                                                60 minutes/ per day
-                                            </p>
-                                        </li>
-                                        <li class="service__aminities-item">
-                                            <div class="service__aminities-name">
-                                                <span><i class="fa-regular fa-circle-check"></i></span>
-                                                <h5>Aroma Therapy</h5>
-                                            </div>
-                                            <p class="service__aminities-value">
-                                                20 minutes/ per day
-                                            </p>
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="custom-btn"><span>View More</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>}
+                    //<div class="swiper-slide">
+                    //    <div class="service__item1">
+                    //        <div class="service__item1-inner">
+                    //            <div class="service__item1-thumb">
+                    //                <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/service/1.png" alt="service image">
+                    //            </div>
+                    //            <div class="service__item1-content">
+                    //                <div class="common-header">
+                    //                    <p class="subtitle">Experience For The Senses</p>
+                    //                    <h3>
+                    //                       @item.ServiceTitle
+                    //                        Center
+                    //                    </h3>
+                    //                </div>
+                    //                <p>
+                    //                    Continually productize compelling quality for packed in consulting
+                    //                    productize compelling quality for all packed in with growth from
+                    //                    Setting up to website and creating pages.
+                    //                </p>
+                    //                <ul class="service__aminities">
+                    //                    <li class="service__aminities-item">
+                    //                        <div class="service__aminities-name">
+                    //                            <span><i class="fa-regular fa-circle-check"></i></span>
+                    //                            <h5>Facial Care</h5>
+                    //                        </div>
+                    //                        <p class="service__aminities-value">
+                    //                            30 minutes/ per day
+                    //                        </p>
+                    //                    </li>
+                    //                    <li class="service__aminities-item">
+                    //                        <div class="service__aminities-name">
+                    //                            <span><i class="fa-regular fa-circle-check"></i></span>
+                    //                            <h5>Body Massage</h5>
+                    //                        </div>
+                    //                        <p class="service__aminities-value">
+                    //                            60 minutes/ per day
+                    //                        </p>
+                    //                    </li>
+                    //                    <li class="service__aminities-item">
+                    //                        <div class="service__aminities-name">
+                    //                            <span><i class="fa-regular fa-circle-check"></i></span>
+                    //                            <h5>Aroma Therapy</h5>
+                    //                        </div>
+                    //                        <p class="service__aminities-value">
+                    //                            20 minutes/ per day
+                    //                        </p>
+                    //                    </li>
+                    //                </ul>
+                    //                <a href="#" class="custom-btn"><span>View More</span></a>
+                    //            </div>
+                    //        </div>
+                    //    </div>
+                    //</div>
+                    }
                 </div>
             </div>
             <div class="service__slider-prev"><i class="fa-solid fa-arrow-left"></i></div>

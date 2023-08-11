@@ -1,4 +1,4 @@
-﻿@model List<HotelResume>
+﻿@model HotelResume
 @{
     Layout = null;
 }
@@ -10,16 +10,15 @@
 
                 <div class="col-lg-6">
 
-                    @foreach (var item in Model)
-                    {
+                   
                     <div class="about__content" data-aos="fade-up" data-aos-duration="1000">
 
                         <div class="common-header">
                             <p class="subtitle">Özüm Hotel'e Hoşgeldiniz</p>
-                            <h2>@item.HotelTitle</h2>
+                            @*<h2>@item.HotelTitle</h2>*@
                         </div>
                         <p>
-                           @item.HotelDescription
+                            @ViewBag.description
                         </p>
            
                         <ul class="funfact__list my-4">
@@ -47,7 +46,7 @@
                         </ul>
                         <a href="#" class="custom-btn"><span>Explore Now</span></a>
                     </div>
-                    }
+                    
 
                 </div>
                 <div class="col-lg-6">

@@ -9,8 +9,8 @@ namespace HotelProject.Entitylayer.Concrete
     public class Service
     {
         public int ServiceId { get; set; }
-        public int ServiceTitle { get; set; }
-        public int ServiceDescription { get; set; }
-        public int ServiceImageUrl { get; set; }
+        public string ServiceTitle { get; set; }
+        public string ServiceDescription { get; set; }
+        public string ServiceImageUrl { get; set; }
     }
 }
