@@ -1,0 +1,120 @@
+﻿@model List<HotelProject.Entitylayer.Concrete.Staff>
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özüm Otel</title>
+
+    <link rel="shortcut icon" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/aos.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/all.min.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/lightcase.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/flatpickr.min.css">
+
+    <!-- main css for template -->
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ===============>> Preloader start here <<================= -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- ===============>> Preloader end here <<================= -->
+    <!-- ========== Header Section Starts Here========== -->
+    @await Component.InvokeAsync("_NavbarPartial")
+    <!-- ========== Header Section Ends Here========== -->
+    <!-- ================> Page header start here <================== -->
+    <section class="page-header bg--cover" style="background-image: url(https://sobekstonehouse.com/images/resim/6883-SOBEK-SEC%C4%B0LM%C4%B0S39.jpg);">
+        <div class="container">
+            <div class="page-header__content text-center">
+                <h2>Hotel Staff</h2>
+                <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.html">Pages</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">staff</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- ================> Page header end here <================== -->
+    <!-- ========== Team Section start Here========== -->
+
+
+    <section class="team padding-top padding-bottom">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header__content">
+               
+                    <p>
+                        Ekip ruhuyla çalışan, misafir memnuniyetine odaklanmış ve her gün en iyisini sunmaya kararlı profesyonellerden oluşan bir ekibimiz var.
+                    </p>
+                </div>
+            </div>
+            <div class="team__wrapper">
+                <div class="row g-4">
+                    @foreach (var item in Model)
+                    {
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="team__item2">
+                            <div class="team__item2-inner">
+                                <div class="team__item2-thumb">
+                                    <img src="@item.ImageUrl" alt="Team staff image">
+                                </div>
+                                <div class="team__item2-content">
+                                    <h3><a href="team-single.html">@item.StaffName</a></h3>
+                                    <p>@item.StaffTitle</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- ========== Team Section end Here========== -->
+    <!-- ========== Footer Section start Here========== -->
+    @await Component.InvokeAsync("_FooterSection");
+    <!-- ========== Footer Section ends Here========== -->
+    <!-- scrollToTop start here -->
+    <a href="#" class="scrollToTop"><i class="fa-solid fa-arrow-up"></i></a>
+    <!-- scrollToTop ending here -->
+    <!-- vendor plugins -->
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/isotope.pkgd.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/flatpickr.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/all.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/swiper-bundle.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/aos.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/jquery.nice-select.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/countdown.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/lightcase.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/purecounter_vanilla.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/kursor.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/progressbar.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/custom.js"></script>
+</body>
+
+</html>

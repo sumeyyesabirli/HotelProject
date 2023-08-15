@@ -1,0 +1,211 @@
+﻿@model List<HotelProject.Entitylayer.Concrete.Service>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özüm Otel</title>
+
+    <link rel="shortcut icon" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/aos.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/all.min.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/lightcase.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/flatpickr.min.css">
+
+    <!-- main css for template -->
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ===============>> Preloader start here <<================= -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- ===============>> Preloader end here <<================= -->
+    <!-- ========== Header Section Starts Here========== -->
+    @await Component.InvokeAsync("_NavbarPartial")
+    <!-- ========== Header Section Ends Here========== -->
+    <!-- ================> Page header start here <================== -->
+    <section class="page-header bg--cover" style="background-image: url(https://sobekstonehouse.com/images/resim/8515-resim4.jpg);">
+        <div class="container">
+            <div class="page-header__content text-center">
+                <h2>Hotel Services</h2>
+                <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">services</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- ================> Page header end here <================== -->
+    <!-- ========== Service Section start Here========== -->
+    <section class="service padding-top padding-bottom">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header__content">
+                    <p class="subtitle">
+                        Misafirlerimize unutulmaz bir konaklama deneyimi sunmak adına özenle tasarladığımız geniş kapsamlı hizmetlerimizle, konforunuz ve memnuniyetiniz bizim önceliğimizdir.
+                    </p>
+                </div>
+            </div>
+            <div class="service__wrapper">
+                <div class="row g-4">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-xl-4 col-md-6">
+                            <div class="service__item2">
+                                <div class="service__item2-inner">
+                                    <div class="service__item2-thumb">
+                                        <img src="@item.Icon" alt="service icon">
+                                    </div>
+                                    <div class="service__item2-content">
+                                        <h3><a href="service-single.html">@item.ServiceTitle</a> </h3>
+                                        <p>
+                                            @item.ServiceDescription
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    }  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== Service Section Ends Here========== -->
+    <!-- ========== Faq Section start Here========== -->
+    <section class="faq padding-top padding-bottom bg--section-color">
+        <div class="container">
+            <div class="faq__wrapper">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="faq__content">
+                            <div class="section-header">
+                                <div class="section-header__content text-start">
+                                    <h2>
+                                       Sık Sorulan Sorular <br>
+                                      
+                                    </h2>
+                                   
+                                </div>
+                            </div>
+                            <div class="accordion" id="faqAccordion2">
+                                <div class="row g-4">
+                                    <div class="col-12">
+                                        <div class="accordion__item" data-aos="fade-up-right" data-aos-duration="1000">
+                                            <div class="accordion__header" id="faq1">
+                                                <button class="accordion__button collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#faqBody1" aria-expanded="false" aria-controls="faqBody1">
+                                                    Oteldeki oda seçenekleri nelerdir?
+                                                    <span class="plus-icon"></span>
+                                                </button>
+                                            </div>
+                                            <div id="faqBody1" class="accordion-collapse collapse" aria-labelledby="faq1"
+                                                 data-bs-parent="#faqAccordion2">
+                                                <div class="accordion__body">
+                                                    Otelimiz geniş bir yelpazede farklı konfor seviyelerinde oda seçenekleri sunmaktadır. Standart odalardan lüks süitlere kadar çeşitli seçenekler arasından tercihinizi yapabilirsiniz.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="accordion__item" data-aos="fade-up-right" data-aos-duration="1100">
+                                            <div class="accordion__header" id="faq2">
+                                                <button class="accordion__button" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#faqBody2" aria-expanded="true" aria-controls="faqBody2">
+                                                    Evcil hayvan dostu bir otel misiniz, evcil hayvan politikanız nedir? <span class="plus-icon"></span>
+                                                </button>
+                                            </div>
+                                            <div id="faqBody2" class="accordion-collapse collapse show" aria-labelledby="faq2"
+                                                 data-bs-parent="#faqAccordion2">
+                                                <div class="accordion__body">
+                                                    Evet, evcil hayvan dostu bir oteliz. Misafirlerimizin evcil hayvanlarıyla konaklamalarına olanak sağlamaktan mutluluk duyarız. Ancak, evcil hayvan politikamız hakkında daha fazla bilgi almak için lütfen önceden rezervasyon sırasında bizimle iletişime geçin.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="accordion__item" data-aos="fade-up-right" data-aos-duration="1200">
+                                            <div class="accordion__header" id="faq3">
+                                                <button class="accordion__button collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#faqBody3" aria-expanded="false" aria-controls="faqBody3">
+                                                    Otelde hangi olanaklar ve hizmetler bulunmaktadır?<span class="plus-icon"></span>
+                                                </button>
+                                            </div>
+                                            <div id="faqBody3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                                                 data-bs-parent="#faqAccordion2">
+                                                <div class="accordion__body">
+                                                    Otelimizde restoran, bar, spa, fitness merkezi gibi birçok olanak ve hizmet bulunmaktadır. Ayrıca toplantı ve etkinlik alanları da sunmaktayız.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="accordion__item" data-aos="fade-up-right" data-aos-duration="1300">
+                                            <div class="accordion__header" id="faq4">
+                                                <button class="accordion__button collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#faqBody4" aria-expanded="false" aria-controls="faqBody4">
+                                                    Yakın çevrede gezilecek yerlere ulaşım nasıl sağlanır?<span class="plus-icon"></span>
+                                                </button>
+                                            </div>
+                                            <div id="faqBody4" class="accordion-collapse collapse" aria-labelledby="faq4"
+                                                 data-bs-parent="#faqAccordion2">
+                                                <div class="accordion__body">
+                                                    Otelimiz merkezi bir konumda bulunmakta olup, çevredeki önemli turistik ve ticari bölgelere kolay ulaşım imkanı sunmaktadır. Toplu taşıma araçları veya taksi gibi seçeneklerle gezilecek yerlere rahatça ulaşabilirsiniz.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="faq__image">
+                            <img src="https://sobekstonehouse.com/images/resim/9692-SOBEK-SEC%C4%B0LM%C4%B0S35.jpg" alt="faq image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== Faq Section ends Here========== -->
+    <!-- ========== Footer Section start Here========== -->
+    @await Component.InvokeAsync("_FooterSection");
+    <!-- ========== Footer Section ends Here========== -->
+    <!-- scrollToTop start here -->
+    <a href="#" class="scrollToTop"><i class="fa-solid fa-arrow-up"></i></a>
+    <!-- scrollToTop ending here -->
+    <!-- vendor plugins -->
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/isotope.pkgd.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/flatpickr.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/all.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/swiper-bundle.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/aos.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/jquery.nice-select.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/countdown.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/lightcase.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/purecounter_vanilla.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/kursor.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/progressbar.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/custom.js"></script>
+</body>
+
+</html>

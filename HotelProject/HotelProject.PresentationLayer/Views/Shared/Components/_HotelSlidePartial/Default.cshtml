@@ -1,0 +1,33 @@
+﻿
+@model List<Slide>
+
+@{
+    Layout = null;
+}
+<section class="hero">
+    <div class="hero__slider swiper">
+        <div class="swiper-wrapper">
+            @foreach (var item in Model)
+            {                
+            <div class="swiper-slide">
+                    <div class="hero__wrapper" style="background-image:url(@item.SlideImageUrl)">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="hero__content hero__content--center">
+                                    <h1>
+                                            Konforlu konaklama imkanıyla unutulmaz bir lüks deneyimi yaşayın.
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+        @*<div class="hero__slider-prev"><i class="fa-solid fa-arrow-left"></i></div>*@
+        <div class="hero__slider-next"><i class="fa-solid fa-arrow-right"></i></div>
+    </div>
+</section>

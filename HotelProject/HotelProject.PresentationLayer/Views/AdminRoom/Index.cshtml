@@ -1,0 +1,38 @@
+﻿@model List<HotelProject.Entitylayer.Concrete.Room>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Admin1Layout.cshtml";
+    int count = 0;
+}
+
+s
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>#</th>
+        <th>Oda Numarası</th>
+        <th>içerik</th>
+        <th>Type</th>
+        <th>M2</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.RoomNumber</td>
+            <td>@item.RoomDescription</td>
+            <td>@item.RoomType</td>
+            <td>@item.RoomSqm</td>
+            <td><a href="/AdminRoom/DeleteRoom/@item.RoomId" class="btn mb-1 btn-rounded btn-danger">Sil</a></td>
+            <td><a href="/AdminRoom/UpdateRoom/@item.RoomId" class="btn mb-1 btn-rounded btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/AdminRoom/AddRoom/" class="btn mb-1 btn-rounded btn-info">Yeni Oda Girişi</a>

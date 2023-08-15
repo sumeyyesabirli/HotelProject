@@ -1,0 +1,285 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özüm Otel</title>
+
+    <link rel="shortcut icon" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/aos.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/all.min.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/lightcase.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/flatpickr.min.css">
+
+    <!-- main css for template -->
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ===============>> Preloader start here <<================= -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- ===============>> Preloader end here <<================= -->
+    <!-- ========== Header Section Starts Here========== -->
+    @await Component.InvokeAsync("_NavbarPartial")
+    <!-- ========== Header Section Ends Here========== -->
+    <!-- ================> Page header start here <================== -->
+    <section class="page-header bg--cover" style="background-image: url(https://sobekstonehouse.com/images/resim/1492-manzara.jpg);">
+        <div class="container">
+            <div class="page-header__content text-center">
+                <h2>Contact Us</h2>
+                <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact us</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- ================> Page header end here <================== -->
+    <!-- ========== contact Section start Here========== -->
+    @await Html.PartialAsync("/Views/Contact/AddContact.cshtml")
+
+    <!-- ========== contact Section ends Here========== -->
+    <!-- ========== Map Section start Here========== -->
+    <div class="map paddding-top padding-bottom">
+        <div class="container">
+            <div class="map__wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1601430.0918672152!2d35.067027499999995!3d38.3769064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d6025c679e1679%3A0xf9178b7341dc5e49!2sKapadokya!5e0!3m2!1str!2str!4v1692140083586!5m2!1str!2str"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- ========== Map Section ends Here========== -->
+    <!-- ========== Footer Section start Here========== -->
+    <footer class="footer">
+
+        <!-- Footer Newsletter -->
+        <div class="newsletter newsletter--lowerd">
+            <div class="container">
+                <div class="newsletter__wrapper">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Main footer part -->
+        <div class="footer__wrapper padding-top padding-top--2x padding-bottom">
+            <div class="container">
+                <div class="row g-5">
+
+                    <!-- footer about -->
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer__about">
+                            <a class="footer__brand" href="index.html"><img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/logo/logo.png" alt="Tavern logo"></a>
+                            <p>
+                                Continually productize with compeling dome packed with all elated in utilize website and creating
+                                supply
+                            </p>
+                            <div class="social__block">
+                                <h6>Follow Us:</h6>
+                                <ul class="social">
+                                    <li class="social__item">
+                                        <a href="#" class="social__link"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link"><i class="fab fa-discord"></i></a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link"><i class="fab fa-twitch"></i></a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- useful links -->
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer__block">
+                            <div class="footer__block-title">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <div class="footer__block-body">
+                                <ul class="footer__links">
+                                    <li class="footer__links-item">
+                                        <a class="footer__link" href="#">
+                                            <span>
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </span> Room
+                                            and
+                                            Suits
+                                        </a>
+                                    </li>
+                                    <li class="footer__links-item">
+                                        <a class="footer__link" href="#">
+                                            <span>
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </span>Resturant
+                                        </a>
+                                    </li>
+                                    <li class="footer__links-item">
+                                        <a class="footer__link" href="#">
+                                            <span>
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </span>
+                                            Spa Center
+                                        </a>
+                                    </li>
+                                    <li class="footer__links-item">
+                                        <a class="footer__link" href="#">
+                                            <span>
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </span>
+                                            Swimming
+                                        </a>
+                                    </li>
+                                    <li class="footer__links-item">
+                                        <a class="footer__link" href="#">
+                                            <span>
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </span>
+                                            Contact Us
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact infos -->
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer__block">
+                            <div class="footer__block-title">
+                                <h3>Contact info</h3>
+                            </div>
+                            <div class="footer__block-body">
+                                <ul class="footer__info">
+                                    <li class="footer__info-item">
+                                        <span><i class="fa-solid fa-phone"></i></span>
+                                        <p>
+                                            88130-589-745-6987
+                                            +1655-456-523
+                                        </p>
+                                    </li>
+                                    <li class="footer__info-item">
+                                        <span><i class="fa-solid fa-clock"></i></span>
+                                        <p>
+                                            Mon-Fri 09:00-18:00 (except public holidays)
+                                        </p>
+                                    </li>
+                                    <li class="footer__info-item">
+                                        <span><i class="fa-solid fa-location-dot"></i></span>
+                                        <p>
+                                            25/2 Vokte Street Building
+                                            Melborn City
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery -->
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer__block">
+                            <div class="footer__block-title">
+                                <h3>Gallery</h3>
+                            </div>
+                            <div class="footer__block-body">
+                                <ul class="footer__gallery">
+                                    <li class="footer__gallery-item">
+                                        <a href="#">
+                                            <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/gallery/01.png"
+                                                 alt="gallery image">
+                                        </a>
+                                    </li>
+                                    <li class="footer__gallery-item">
+                                        <a href="#">
+                                            <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/gallery/02.png"
+                                                 alt="gallery image">
+                                        </a>
+                                    </li>
+                                    <li class="footer__gallery-item">
+                                        <a href="#">
+                                            <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/gallery/03.png"
+                                                 alt="gallery image">
+                                        </a>
+                                    </li>
+                                    <li class="footer__gallery-item">
+                                        <a href="#">
+                                            <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/gallery/04.png"
+                                                 alt="gallery image">
+                                        </a>
+                                    </li>
+                                    <li class="footer__gallery-item">
+                                        <a href="#">
+                                            <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/gallery/05.png"
+                                                 alt="gallery image">
+                                        </a>
+                                    </li>
+                                    <li class="footer__gallery-item">
+                                        <a href="#">
+                                            <img src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/gallery/06.png"
+                                                 alt="gallery image">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer copyright part -->
+        <div class="footer__copyright py-30">
+            <div class="container">
+                <p class="text-center mb-0">© Copyright 2023. All Rights Reserved by LabArtisan</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ========== Footer Section ends Here========== -->
+    <!-- scrollToTop start here -->
+    <a href="#" class="scrollToTop"><i class="fa-solid fa-arrow-up"></i></a>
+    <!-- scrollToTop ending here -->
+    <!-- vendor plugins -->
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/isotope.pkgd.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/flatpickr.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/all.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/swiper-bundle.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/aos.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/jquery.nice-select.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/countdown.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/lightcase.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/purecounter_vanilla.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/kursor.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/progressbar.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/custom.js"></script>
+</body>
+
+</html>

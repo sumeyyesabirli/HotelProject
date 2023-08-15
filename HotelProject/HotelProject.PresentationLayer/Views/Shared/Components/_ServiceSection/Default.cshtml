@@ -1,0 +1,80 @@
+﻿@model List<HotelProject.Entitylayer.Concrete.Service>
+@{
+    Layout = null;
+}
+
+<section class="service padding-top padding-bottom bg--section-color">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+            <div class="section-header__content">
+                <p class="subtitle">
+                    Misafirlerimize unutulmaz bir konaklama deneyimi sunmak adına özenle tasarladığımız geniş kapsamlı hizmetlerimizle, konforunuz ve memnuniyetiniz bizim önceliğimizdir.
+                </p>
+            </div>
+        </div>
+        <div class="service__wrapper service__wrapper--home1" data-aos="fade-up" data-aos-duration="1000"
+             data-aos-delay="100">
+            <div class="service__slider swiper">
+                <div class="swiper-wrapper">
+                    @foreach (var item in Model)
+                    {
+                        
+                    
+                    <div class="swiper-slide">
+                        <div class="service__item1">
+                            <div class="service__item1-inner">
+                                <div class="service__item1-thumb">
+                                    <img src="@item.ServiceImageUrl" alt="service image">
+                                </div>
+                                <div class="service__item1-content">
+                                    <div class="common-header">                                      
+                                        <h3>
+                                           @item.ServiceTitle
+                                          
+                                        </h3>
+                                    </div>
+                                    <p>
+                                       @item.ServiceDescription
+                                    </p>
+                                    <ul class="service__aminities">
+                                        <li class="service__aminities-item">
+                                            <div class="service__aminities-name">
+                                                <span><i class="fa-regular fa-circle-check"></i></span>
+                                                <h5>Facial Care</h5>
+                                            </div>
+                                            <p class="service__aminities-value">
+                                                30 minutes/ per day
+                                            </p>
+                                        </li>
+                                        <li class="service__aminities-item">
+                                            <div class="service__aminities-name">
+                                                <span><i class="fa-regular fa-circle-check"></i></span>
+                                                <h5>Body Massage</h5>
+                                            </div>
+                                            <p class="service__aminities-value">
+                                                60 minutes/ per day
+                                            </p>
+                                        </li>
+                                        <li class="service__aminities-item">
+                                            <div class="service__aminities-name">
+                                                <span><i class="fa-regular fa-circle-check"></i></span>
+                                                <h5>Aroma Therapy</h5>
+                                            </div>
+                                            <p class="service__aminities-value">
+                                                20 minutes/ per day
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <a href="/Service/Index" class="custom-btn"><span>Hizmetlerimiz</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+            <div class="service__slider-prev"><i class="fa-solid fa-arrow-left"></i></div>
+            <div class="service__slider-next"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+    </div>
+</section>

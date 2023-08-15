@@ -1,0 +1,36 @@
+﻿@model List<HotelProject.Entitylayer.Concrete.HotelResume>
+@{
+    Layout = null;
+}
+
+<section class="about padding-top padding-bottom about--shape">
+    <div class="container">
+        <div class="about__wrapper">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    @foreach (var item in Model)
+                    {
+                        <div class="about__content" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="100">
+
+                    <div class="common-header">
+                 
+                    <h2>@item.HotelDescription</h2>
+                    </div>                
+
+                    </div>
+
+                  
+                    }
+                    
+                   
+                </div>
+                <div class="col-lg-6">
+                    <div class="about__image" data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="about__image-lg"><img src="https://sobekstonehouse.com/images/resim/810-DSC_2612-kopya.jpg" alt="About image"></div>
+                        <div class="about__image-sm"><img src="https://sobekstonehouse.com/images/resim/5928-DSC_2589-kopya.jpg" alt="About image"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

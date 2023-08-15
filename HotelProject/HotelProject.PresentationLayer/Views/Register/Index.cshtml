@@ -1,0 +1,149 @@
+﻿@model RegisterViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tavern- Resort and Hotel account HTMl Template</title>
+
+    <link rel="shortcut icon" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/aos.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/all.min.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/lightcase.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/flatpickr.min.css">
+
+    <!-- main css for template -->
+    <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ===============>> Preloader start here <<================= -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- ===============>> Preloader end here <<================= -->
+    <!-- ========== Header Section Starts Here========== -->
+    @await Component.InvokeAsync("_NavbarPartial")
+    <!-- ========== Header Section Ends Here========== -->
+    <!-- ========== Account Section start Here========== -->
+    <div class="account padding-top padding-bottom">
+        <div class="container">
+
+            <div class="account__wrapper">
+                <div class="row justify-content-center">
+                    <div class="col-xl-4 col-lg-5 col-md-7">
+                        <div class="account__tab">
+                            <ul class="account__tab-nav nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup-tab-pane"
+                                            type="button" role="tab" aria-controls="signup-tab-pane" aria-selected="true">
+                                        Sign Up
+                                    </button>
+                                </li>
+                            
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="signup-tab-pane" role="tabpanel" aria-labelledby="signup-tab"
+                                     tabindex="0">
+                                  
+
+                                    <!-- sign up form-->
+
+                                    <form role="form" method="post" class="account__form">
+                                        <!-- Sign up form content -->
+                                        <div class="row justify-content-center g-4 mb-3">
+                                            <div class="col-12">
+                                                <div class="account__form-inputgroup">
+                                                    <div class="account__form-input">
+                                                        <input type="text" class="form-control" placeholder="Adınız" asp-for="Name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="account__form-inputgroup">
+                                                    <div class="account__form-input">
+                                                        <input type="text" class="form-control" placeholder="soyadınız" asp-for="Surname">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="account__form-inputgroup">
+                                                    <div class="account__form-input">
+                                                        <input type="email" class="form-control" placeholder="Email Address" asp-for="Email">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="account__form-inputgroup">
+                                                    <div class="account__form-input">
+                                                        <input type="text" class="form-control" placeholder="username" asp-for="Username">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="account__form-inputgroup">
+                                                    <div class="account__form-input">
+                                                        <input type="password" class="form-control" placeholder="Password" asp-for="Password">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <p>By creating an account you will be up to date on an order's</p>
+                                        <div class="account__form-btn mt-4">
+                                            <button class="custom-btn custom-btn--fluid" type="submit"><span>Sign Up</span></button>
+                                        </div>
+                                        <p class="mt-5 login-form__footer">Bir Hesabın Var Mı?<a href="/Login/Index/" class="text-primary">Oturum Aç </a>
+                                    </form>
+
+
+
+                                </div>
+                         
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========== Account Section Ends Here========== -->
+    <!-- ========== Footer Section start Here========== -->
+    @await Component.InvokeAsync("_FooterSection");
+    <!-- ========== Footer Section ends Here========== -->
+    <!-- scrollToTop start here -->
+    <a href="#" class="scrollToTop"><i class="fa-solid fa-arrow-up"></i></a>
+    <!-- scrollToTop ending here -->
+    <!-- vendor plugins -->
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/isotope.pkgd.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/flatpickr.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/all.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/swiper-bundle.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/aos.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/jquery.nice-select.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/countdown.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/lightcase.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/purecounter_vanilla.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/kursor.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/progressbar.min.js"></script>
+    <script src="~/tavern-hotel/Tavern-buyerfile/tavern/assets/js/custom.js"></script>
+</body>
+
+</html>
