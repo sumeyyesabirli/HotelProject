@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace HotelProject.DataAccessLayer.Migrations
 {
-    public partial class mig1 : Migration
+    public partial class mig_1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,7 +18,8 @@ namespace HotelProject.DataAccessLayer.Migrations
                     Title1 = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Title2 = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Image = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Image2 = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -48,9 +49,7 @@ namespace HotelProject.DataAccessLayer.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
-                    UserPhone = table.Column<int>(type: "int", nullable: false),
-                    City = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedEmail = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -74,17 +73,28 @@ namespace HotelProject.DataAccessLayer.Migrations
                 name: "BookRooms",
                 columns: table => new
                 {
-                    BookRoomId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CheckInDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CheckOutDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    AdultCount = table.Column<int>(type: "int", nullable: false),
-                    ChildCount = table.Column<int>(type: "int", nullable: false),
-                    RoomCount = table.Column<int>(type: "int", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhoneNumber = table.Column<int>(type: "int", nullable: true),
+                    RoomType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Surname = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Mail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CheckIn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CheckOut = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    AdultCount = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ChildCount = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RoomCount = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SpecialRequest = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Country = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SpecialNote = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BookRooms", x => x.BookRoomId);
+                    table.PrimaryKey("PK_BookRooms", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -108,17 +118,33 @@ namespace HotelProject.DataAccessLayer.Migrations
                 {
                     ContactId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ContactEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ContactTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ContactDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Adress = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PhoneNumber = table.Column<int>(type: "int", nullable: false),
-                    OpenCloseHour = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    HotelEmail = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ContactEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ContactTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ContactDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Adress = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhoneNumber = table.Column<int>(type: "int", nullable: true),
+                    OpenCloseHour = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    HotelEmail = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Contacts", x => x.ContactId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Guests",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Surname = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Guests", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -138,20 +164,37 @@ namespace HotelProject.DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Privilegeses",
+                columns: table => new
+                {
+                    PrivilegesId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Icon = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Privilegeses", x => x.PrivilegesId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Rooms",
                 columns: table => new
                 {
                     RoomId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    RoomName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RoomTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RoomDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RoomType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RoomSqm = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Breakfeast = table.Column<bool>(type: "bit", nullable: false),
-                    FreeWifi = table.Column<bool>(type: "bit", nullable: false),
-                    Shower = table.Column<bool>(type: "bit", nullable: false),
-                    PersonCount = table.Column<int>(type: "int", nullable: false)
+                    RoomTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RoomNumber = table.Column<int>(type: "int", nullable: true),
+                    RoomDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RoomType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RoomSqm = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    Breakfeast = table.Column<bool>(type: "bit", nullable: true),
+                    FreeWifi = table.Column<bool>(type: "bit", nullable: true),
+                    Shower = table.Column<bool>(type: "bit", nullable: true),
+                    PersonCount = table.Column<int>(type: "int", nullable: true),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -164,9 +207,10 @@ namespace HotelProject.DataAccessLayer.Migrations
                 {
                     ServiceId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ServiceTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ServiceDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ServiceImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ServiceTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ServiceDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ServiceImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Icon = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -206,12 +250,12 @@ namespace HotelProject.DataAccessLayer.Migrations
                 {
                     StaffId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StaffName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StaffSurname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StaffEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StaffPassword = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StaffTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StaffImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    StaffName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    StaffSurname = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    StaffEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    StaffTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    StaffNubmer = table.Column<int>(type: "int", nullable: true),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -330,9 +374,13 @@ namespace HotelProject.DataAccessLayer.Migrations
                 {
                     RoomDetailsId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    RoomDetailsTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RoomDetailsDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RoomDetailsTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RoomDetailsDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ImageUrl2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ImageUrl3 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ImageUrl4 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ImageUrl5 = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     RoomId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -451,7 +499,13 @@ namespace HotelProject.DataAccessLayer.Migrations
                 name: "Contacts");
 
             migrationBuilder.DropTable(
+                name: "Guests");
+
+            migrationBuilder.DropTable(
                 name: "HotelResumes");
+
+            migrationBuilder.DropTable(
+                name: "Privilegeses");
 
             migrationBuilder.DropTable(
                 name: "Services");

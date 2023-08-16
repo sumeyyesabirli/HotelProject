@@ -1,11 +1,6 @@
 ﻿using HotelProject.Entitylayer.Concrete;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelProject.DataAccessLayer.Concrete
 {
@@ -13,7 +8,7 @@ namespace HotelProject.DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source =SUM; initial catalog = HotelProjectGroup2; integrated security = true");
+            optionsBuilder.UseSqlServer("Data Source =SUM; initial catalog = HotelProjectGroup; integrated security = true");
         }
         public DbSet<About> Abouts { get; set; }
         public DbSet<BookRoom> BookRooms { get; set; }
@@ -30,5 +25,7 @@ namespace HotelProject.DataAccessLayer.Concrete
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Guest> Guests { get; set; }
         public DbSet<Privileges> Privilegeses { get; set; }
+
+       
     }
 }
