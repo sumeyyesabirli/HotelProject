@@ -1,0 +1,36 @@
+﻿@model List<HotelProject.Entitylayer.Concrete.Service>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>#</th>
+        <th>Hizmet Başlığı </th>
+        <th>Hizmet İçeriği </th>
+        <th>Icon</th>
+        <th>Hizmet fotoğraf</th>
+        <th>Güncelle</th>
+
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.ServiceId</th>
+            <th>@item.ServiceTitle</th>
+            <th>@item.ServiceDescription</th>
+            <th>@item.Icon</th>
+            <td>@item.ServiceImageUrl</td>
+            <td><a href="/AdminService/DeleteService/@item.ServiceId" class="btn mb-1 btn-rounded btn-danger">Sil</a></td>
+            <td><a href="/AdminService/UpdateService/@item.ServiceId," class="btn mb-1 btn-rounded btn-success">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+
+<a href="/AdminService/AddService/" class="btn mb-1 btn-rounded btn-outline-info">Yeni Hizmet Girişi</a>

@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tavern- Resort and Hotel Booking HTMl Template</title>
+    <title>Özüm Otel</title>
   <link rel="shortcut icon" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/css/aos.css">
@@ -28,22 +28,23 @@
     @await Component.InvokeAsync("_NavbarPartial")
   <!-- ========== Header Section Ends Here========== -->
   <!-- ========== Hero Section start Here========== -->
+
     @await Component.InvokeAsync("_HotelSlidePartial");
   <!-- ========== Hero Section Ends Here========== -->
   <!-- ========== Feature Section start Here========== -->
-   @await Component.InvokeAsync("_DefaultFeatureSection");
+   @await Component.InvokeAsync("_DefaultFeatureSection")
   <!-- ========== Feature Section Ends Here========== -->
   <!-- ========== Room Section start Here========== -->
-    @await Component.InvokeAsync("_RoomSection");
+    @await Component.InvokeAsync("_RoomRoomsSection")
   <!-- ========== Room Section ends Here========== -->
   <!-- ========== About Section start Here========== -->
-   @await Component.InvokeAsync("_AboutSection");
+ @* @await Component.InvokeAsync("_AboutSection");*@
   <!-- ========== About Section ends Here========== -->
   <!-- ========== Service Section start Here========== -->
-    @await Component.InvokeAsync("_ServiceSection");
+    @await Component.InvokeAsync("_ServiceSection")
   <!-- ========== Service Section ends Here========== -->
   <!-- ========== Footer Section start Here========== -->
-    @await Component.InvokeAsync("_FooterSection");
+    @await Component.InvokeAsync("_FooterSection")
   <!-- ========== Footer Section ends Here========== -->
   <!-- scrollToTop start here -->
   <a href="#" class="scrollToTop"><i class="fa-solid fa-arrow-up"></i></a>

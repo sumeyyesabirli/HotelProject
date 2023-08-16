@@ -1,20 +1,21 @@
 ﻿using HotelProject.BusinessLayer.Abstract;
+using HotelProject.Entitylayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelProject.PresentationLayer.ViewComponents.Default
 {
     public class _DefaultFeatureSection : ViewComponent
     {
-      private readonly IRoomDetailService _roomDetailService;
-     
-      public _DefaultFeatureSection(IRoomDetailService roomDetailService)
+        private readonly IPrivilegesServices _privilegesServices;
+
+        public _DefaultFeatureSection(IPrivilegesServices privilegesServices)
+        {
+            _privilegesServices = privilegesServices;
+        }
+
+        public IViewComponentResult Invoke()
       {
-          _roomDetailService = roomDetailService;
-      }
-     
-      public IViewComponentResult Invoke()
-      {
-          var values = _roomDetailService.TGetList();
+          var values = _privilegesServices.TGetList();
           return View(values);
       }
     }

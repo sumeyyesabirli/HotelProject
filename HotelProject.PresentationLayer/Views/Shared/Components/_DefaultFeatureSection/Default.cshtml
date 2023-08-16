@@ -1,4 +1,4 @@
-﻿@model List<HotelProject.Entitylayer.Concrete.RoomDetail>
+﻿@model List<HotelProject.Entitylayer.Concrete.Privileges>
 
 
 <section class="feature padding-top padding-bottom">
@@ -13,7 +13,6 @@
             </div>
         </div>
         <div class="feature__wrapper">
-
             <div class="row g-4">
                 @foreach (var item in Model)
                 {
@@ -21,15 +20,16 @@
                         <div class="feature__item" data-aos="fade-up" data-aos-duration="1000">
                             <div class="feature__item-inner">
                                 <div class="feature__item-thumb">
-                                    <img src="@item.ImageUrl" alt="" class="img-fluid radius-image mt-4" />
+                                    <img src="@item.Icon" alt="feature icon">
                                 </div>
                                 <div class="feature__item-content">
-                                    <h3>@item.RoomDetailsTitle</h3>
-                                    <p>24 Hours Support</p>
+                                    <h3>@item.Title</h3>
+                                    <p>@item.Description</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 }
             </div>
         </div>

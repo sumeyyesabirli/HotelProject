@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.DataAccessLaye
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.Entitylayer", "HotelProject.Entitylayer\HotelProject.Entitylayer.csproj", "{B2D44BF5-9513-48B6-A3FA-99AF4D3DB3AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelProject.PresentationLayer", "HotelProject.PresentationLayer\HotelProject.PresentationLayer.csproj", "{D6748376-9AD9-4D8F-8787-C082448DC05C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.PresentationLayer", "HotelProject.PresentationLayer\HotelProject.PresentationLayer.csproj", "{D6748376-9AD9-4D8F-8787-C082448DC05C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

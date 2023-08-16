@@ -1,0 +1,17 @@
+﻿@model HotelProject.Entitylayer.Concrete.Service
+@{
+    ViewData["Title"] = "AddService";
+    Layout = "~/Views/Shared/_Admin1Layout.cshtml";
+}
+
+<form method="post">
+    <label>Hizmet başlık</label>
+    <input type="text" asp-for="ServiceTitle" class="form-control" />
+    <span asp-validation-for="ServiceTitle" class="text-danger"></span>
+    <br />
+    <label>Hizmet içeriği</label>
+    <input type="text" asp-for="ServiceDescription" class="form-control" />
+    <span asp-validation-for="ServiceDescription" class="text-danger"></span>
+    <br />
+    <button class="btn btn-primary"> Hizmeti Ekle </button>
+</form>

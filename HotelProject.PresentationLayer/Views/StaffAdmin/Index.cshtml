@@ -1,0 +1,36 @@
+﻿@model List<HotelProject.Entitylayer.Concrete.Staff>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Admin1Layout.cshtml";
+}
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>#</th>
+        <th>Personel Adı</th>
+        <th>Personel soyadı</th>
+        <th>Personel Unvan</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <th>@item.StaffId</th>
+            <td>@item.StaffName</td>
+            <td>@item.StaffSurname</td>
+            <td>@item.StaffTitle</td>
+            <td><a href="/StaffAdmin/DeleteStaff/@item.StaffId" class="btn mb-1 btn-rounded btn-danger">Sil</a></td>
+            <td><a href="/StaffAdmin/UpdateStaff/@item.StaffId" class="btn mb-1 btn-rounded btn-success">Güncelle</a></td>
+
+        </tr>
+    }
+
+</table>
+
+<a href="/StaffAdmin/AddStaff/" class="btn mb-1 btn-rounded btn-info">Yeni Personel Girişi</a>

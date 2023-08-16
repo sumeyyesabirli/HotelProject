@@ -1,4 +1,4 @@
-﻿
+﻿@model LoginViewModel
 @{
     Layout = null;
 }
@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tavern- Resort and Hotel account HTMl Template</title>
+    <title>Özüm Otel</title>
 
     <link rel="shortcut icon" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/favicon.png" type="image/x-icon">
 
@@ -45,12 +45,7 @@
                     <div class="col-xl-4 col-lg-5 col-md-7">
                         <div class="account__tab">
                             <ul class="account__tab-nav nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup-tab-pane"
-                                            type="button" role="tab" aria-controls="signup-tab-pane" aria-selected="true">
-                                        Sign Up
-                                    </button>
-                                </li>
+                             
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="signin-tab" data-bs-toggle="tab" data-bs-target="#signin-tab-pane"
                                             type="button" role="tab" aria-controls="signin-tab-pane" aria-selected="false">
@@ -59,80 +54,28 @@
                                 </li>
                             </ul>
                             <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="signup-tab-pane" role="tabpanel" aria-labelledby="signup-tab"
-                                     tabindex="0">
-                                    <a href="#" class="fb-btn d-block">
-                                        <span><i class="fa-brands fa-facebook-f"></i></span> Signup
-                                        with
-                                        <strong>Facebook</strong>
-                                    </a>
+                              
+                                
+                             
 
-                                    <div class="account__or"><span>Or</span></div>
-                                    <form action="#" class="account__form">
-                                        <!-- Sign up form content -->
+
+
+                                    <!-- sign in form-->
+
+                                    <form role="form" method="post" class="account__form">
+
                                         <div class="row justify-content-center g-4 mb-3">
                                             <div class="col-12">
                                                 <div class="account__form-inputgroup">
                                                     <div class="account__form-input">
-                                                        <input type="text" class="form-control" placeholder="Full Name">
+                                                        <input type="text" class="form-control" placeholder="Kullanıcı Adı" asp-for="Username">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="account__form-inputgroup">
                                                     <div class="account__form-input">
-                                                        <input type="text" class="form-control" placeholder="Email Address">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="account__form-inputgroup">
-                                                    <div class="account__form-input">
-                                                        <input type="text" class="form-control" placeholder="Mobile Number">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="account__form-inputgroup">
-                                                    <div class="account__form-input">
-                                                        <input type="password" class="form-control" placeholder="Password">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p>By creating an account you will be up to date on an order's</p>
-                                        <div class="account__form-btn mt-4">
-                                            <button class="custom-btn custom-btn--fluid"><span>Sign Up</span></button>
-                                        </div>
-                                        <p class="account__switcher">
-                                            Already have an account? <a href="#signin-tab-pane"
-                                                                        data-bs-toggle="tab">Sign In</a>
-                                        </p>
-                                    </form>
-                                </div>
-                                <div class="tab-pane fade" id="signin-tab-pane" role="tabpanel" aria-labelledby="signin-tab"
-                                     tabindex="0">
-                                    <a href="#" class="fb-btn d-block">
-                                        <span><i class="fa-brands fa-facebook-f"></i></span> Signin
-                                        with
-                                        <strong>Facebook</strong>
-                                    </a>
-
-                                    <div class="account__or"><span>Or</span></div>
-                                    <form action="#" class="account__form">
-                                        <!-- Sign up form content -->
-                                        <div class="row justify-content-center g-4 mb-3">
-                                            <div class="col-12">
-                                                <div class="account__form-inputgroup">
-                                                    <div class="account__form-input">
-                                                        <input type="text" class="form-control" placeholder="Email Address">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="account__form-inputgroup">
-                                                    <div class="account__form-input">
-                                                        <input type="password" class="form-control" placeholder="Password">
+                                                        <input class="form-control" type="password" placeholder="Password" asp-for="Password">
                                                     </div>
                                                 </div>
                                             </div>
@@ -149,12 +92,9 @@
                                         <div class="account__form-btn mt-4">
                                             <button class="custom-btn custom-btn--fluid"><span>Sign In</span></button>
                                         </div>
-                                        <p class="account__switcher">
-                                            Don't have an account? <a href="#signup-tab-pane"
-                                                                      data-bs-toggle="tab">Sign Up</a>
-                                        </p>
+                                    <p class="mt-5 login-form__footer"><a href="/Register/Index/" class="text-primary">Kayıt ol </a>
                                     </form>
-                                </div>
+
                             </div>
                         </div>
 

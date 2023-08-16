@@ -3,12 +3,15 @@ using HotelProject.BusinessLayer.Concrete;
 using HotelProject.DataAccessLayer.Abstract;
 using HotelProject.DataAccessLayer.Concrete;
 using HotelProject.DataAccessLayer.EntityFramework;
+using HotelProject.Entitylayer.Concrete;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<Context>();
-
+builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
+builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<ICategoryDal, EfCategoryDal>();
 
@@ -26,6 +29,9 @@ builder.Services.AddScoped<IHotelResumeDal, EfHotelResumeDal>();
 
 builder.Services.AddScoped<IRoomService, RoomManager>();
 builder.Services.AddScoped<IRoomDal, EfRoomDal>();
+
+builder.Services.AddScoped<IPrivilegesServices, PrivilegesManager>();
+builder.Services.AddScoped<IPrivilegesDal, EfPrivilegesDal>();
 
 builder.Services.AddScoped<IRoomDetailService, RoomDetailManager>();
 builder.Services.AddScoped<IRoomDetailDal, EfRoomDetailDal>();
@@ -48,8 +54,10 @@ builder.Services.AddScoped<ITestimonialDal, EfTestimonialDal>();
 builder.Services.AddScoped<IUserService, UserManager>();
 builder.Services.AddScoped<IUserDal, EfUserDal>();
 
+builder.Services.AddScoped<IGuestDal, EfGuestDal>();
+builder.Services.AddScoped<IGuestService, GuestManager>();
 
-builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
@@ -65,7 +73,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

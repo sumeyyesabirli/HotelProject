@@ -5,16 +5,16 @@ namespace HotelProject.PresentationLayer.ViewComponents.Default
 {
     public class _RoomRoomsSection : ViewComponent
     {
-        private readonly IRoomDetailService _roomDetailService;
+        private readonly IRoomService _roomService;
 
-        public _RoomRoomsSection(IRoomDetailService roomDetailService)
+        public _RoomRoomsSection(IRoomService roomService)
         {
-            _roomDetailService = roomDetailService;
+            _roomService = roomService;
         }
 
         public IViewComponentResult Invoke()
         {
-            var values = _roomDetailService.TGetList();
+            var values = _roomService.TGetList();
             return View(values);
         }
     }

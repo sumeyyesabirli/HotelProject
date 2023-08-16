@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HotelProject.DataAccessLayer.EntityFramework
 {
-    public class EfUserDal:GenericRepository<User>,IUserDal
+    public class EfUserDal:GenericRepository<AppUser>,IUserDal
     {
     }
 }

@@ -1,0 +1,19 @@
+﻿@model HotelProject.Entitylayer.Concrete.Service
+@{
+    ViewData["Title"] = "UpdateService";
+    Layout = "~/Views/Shared/_Admin1Layout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="ServiceId" />
+    <label>Hizmet Başlığı</label>
+    <input type="text" asp-for="ServiceTitle" class="form-control" />
+    <span asp-validation-for="ServiceTitle" class="text-info"></span>
+    <br />
+    <label>Açıklama</label>
+    <input type="text" asp-for="ServiceDescription" class="form-control" />
+    <span asp-validation-for="ServiceDescription" class="text-info"></span>
+    <br>
+    <button class="btn btn-primary"> Hizmeti Güncelle </button>
+</form>
+

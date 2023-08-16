@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tavern- Resort and Hotel Booking HTMl Template</title>
+    <title>Özüm Otel</title>
 
     <link rel="shortcut icon" href="~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/favicon.png" type="image/x-icon">
 
@@ -36,7 +36,7 @@
     @await Component.InvokeAsync("_NavbarPartial")
     <!-- ========== Header Section Ends Here========== -->
     <!-- ================> Page header start here <================== -->
-    <section class="page-header bg--cover" style="background-image: url(~/tavern-hotel/Tavern-buyerfile/tavern/assets/images/header/bg.jpg);">
+    <section class="page-header bg--cover" style="background-image: url(https://sobekstonehouse.com/images/resim/1492-manzara.jpg);">
         <div class="container">
             <div class="page-header__content text-center">
                 <h2>Contact Us</h2>
@@ -51,109 +51,14 @@
     </section>
     <!-- ================> Page header end here <================== -->
     <!-- ========== contact Section start Here========== -->
-    <section class="contact padding-top padding-bottom">
-        <div class="container">
-            <div class="contact__wrapper">
-                <div class="row g-5">
-                    <div class="col-lg-6">
-                        <div class="contact__info">
-                            <div class="common-header">
-                                <p class="subtitle">The Tavern Hotel</p>
-                                <h2>Know more about <br> our hotel</h2>
-                            </div>
-                            <p>
-                                Continually productize compelling quality for packed in business consulting elated
-                                productize compelling quality for all packed in with all growth from quality elated
-                                Setting up to website and creating pages.
-                            </p>
-                            <ul class="contact__info-list">
-                                <li class="contact__info-item">
-                                    <div class="contact__info-icon">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                    </div>
-                                    <div class="contact__info-content">
-                                        <h6>Office Address</h6>
-                                        <p>
-                                            Suite 1307, Level 12, Tropical Center 218 <br>
-                                            New Elephant Road, Dhaka - 1205
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="contact__info-item">
-                                    <div class="contact__info-icon">
-                                        <i class="fa-solid fa-phone"></i>
-                                    </div>
-                                    <div class="contact__info-content">
-                                        <h6>Phone Number</h6>
-                                        <p>
-                                            +8801278178193, 01009-814600 <br>
-                                            02-960030
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="contact__info-item">
-                                    <div class="contact__info-icon">
-                                        <i class="fa-solid fa-envelope"></i>
-                                    </div>
-                                    <div class="contact__info-content">
-                                        <h6>Office Address</h6>
-                                        <p>
-                                            <a href="mailto:support@tavern.com">support@tavern.com</a> <br>
-                                            <a href="mailto:info@tavern.com">info@tavern.com</a>
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="contact__form">
-                            <h4>Send us a message</h4>
-                            <form action="#">
-                                <div class="row g-4">
-                                    <div class="col-md-6">
-                                        <div class="booking__form-inputgroup">
-                                            <div class="booking__form-input">
-                                                <input type="text" class="form-control" placeholder="Your Name">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="booking__form-inputgroup">
-                                            <div class="booking__form-input">
-                                                <input type="email" class="form-control" placeholder="Your Email">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="booking__form-inputgroup">
-                                            <div class="booking__form-input">
-                                                <input type="text" class="form-control" placeholder="Subject">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=" col-12">
-                                        <div class="booking__form-inputgroup">
-                                            <div class="booking__form-input">
-                                                <textarea class="form-control textarea" placeholder="Your Message..."> </textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="custom-btn mt-40"><span>Submit Now</span></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @await Html.PartialAsync("/Views/Contact/AddContact.cshtml")
+
     <!-- ========== contact Section ends Here========== -->
     <!-- ========== Map Section start Here========== -->
     <div class="map paddding-top padding-bottom">
         <div class="container">
             <div class="map__wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d72786.95261279827!2d24.6004849!3d55.2428558!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e797094f7b1aad%3A0x400d18c70e9dc00!2sUkmerg%C4%97%2C%20Ukmerg%C4%97%20District%20Municipality%2C%20Lithuania!5e0!3m2!1sen!2sbd!4v1685078327628!5m2!1sen!2sbd"
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1601430.0918672152!2d35.067027499999995!3d38.3769064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d6025c679e1679%3A0xf9178b7341dc5e49!2sKapadokya!5e0!3m2!1str!2str!4v1692140083586!5m2!1str!2str"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
@@ -168,20 +73,7 @@
                 <div class="newsletter__wrapper">
                     <div class="row justify-content-center">
                         <div class="col-lg-6">
-                            <div class="newsletter__content text-center">
-                                <div class="common-header">
-                                    <p class="subtitle">Get Update</p>
-                                    <h2>
-                                        Get Latest Updates and Deals
-                                    </h2>
-                                </div>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Enter Your mail"
-                                           aria-label="Subscirbe to Newsletter" aria-describedby="newsletter-input">
-                                    <button class="subscribe-btn" id="newsletter-input">Subscribe</button>
-                                </div>
-
-                            </div>
+                    
                         </div>
                     </div>
                 </div>

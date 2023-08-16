@@ -18,27 +18,27 @@ namespace HotelProject.BusinessLayer.Concrete
             _userDal = userDal;
         }
 
-        public void TDelete(User t)
+        public void TDelete(AppUser t)
         {
             _userDal.Delete(t); 
         }
 
-        public User TGetByID(int id)
+        public AppUser TGetByID(int id)
         {
             return _userDal.GetByID(id);
         }
 
-        public List<User> TGetList()
+        public List<AppUser> TGetList()
         {
             return _userDal.GetList();
         }
 
-        public void TInsert(User t)
+        public void TInsert(AppUser t)
         {
            _userDal.Insert(t);
         }
 
-        public void TUpdate(User t)
+        public void TUpdate(AppUser t)
         {
             _userDal.Update(t);
         }

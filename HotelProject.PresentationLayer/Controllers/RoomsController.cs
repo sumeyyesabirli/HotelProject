@@ -8,5 +8,6 @@ namespace HotelProject.PresentationLayer.Controllers
         {
             return View();
         }
+
     }
 }
