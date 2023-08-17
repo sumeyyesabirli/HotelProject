@@ -1,30 +1,67 @@
-﻿@model List<RoomDetail>
+﻿@model List<Room>
 @{
     Layout = null;
 }
 
-<div class="gallery padding-top padding-bottom">
-    <div class="container">
-        @foreach (var item in Model)
-        {
-            <div class="gallery__wrapper">
-                <div class="row g-4">
-                    <div class="col-md-4">
+
+
+<div class="container flex flex-row justify-content-center align-content-center">
+                @foreach (var item in Model)
+                {
+        
                         <div class="gallery__grid-item">
                             <div class="gallery__grid-inner">
                                 <div class="gallery__grid-image">
-                                    <img src="@item.ImageUrl2" alt="gallery image">
-                                    <a href=" @item.ImageUrl" data-rel="lightcase" class="gallery__view-btn">
+                                    <img src="@item.ImageUrl" alt="gallery image" class="m-3" >
+                                    <a href="@item.ImageUrl" data-rel="lightcase" class="gallery__view-btn">
                                         <i class="fa-solid fa-expand"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                        <div class="gallery__grid-item">
+                            <div class="gallery__grid-inner">
+                                <div class="gallery__grid-image">
+                                    <img src="@item.ImageUrl2" alt="gallery image" class="m-3">
+                                    <a href="@item.ImageUrl2" data-rel="lightcase" class="gallery__view-btn">
+                                        <i class="fa-solid fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                        <div class="gallery__grid-item">
+                            <div class="gallery__grid-inner">
+                                <div class="gallery__grid-image">
+                                    <img src="@item.ImageUrl3" alt="gallery image" class="m-3">
+                                    <a href="@item.ImageUrl3" data-rel="lightcase" class="gallery__view-btn">
+                                        <i class="fa-solid fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery__grid-item">
+                            <div class="gallery__grid-inner">
+                                <div class="gallery__grid-image">
+                                    <img src="@item.ImageUrl4" alt="gallery image" class="m-3">
+                                    <a href="@item.ImageUrl4" data-rel="lightcase" class="gallery__view-btn">
+                                        <i class="fa-solid fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery__grid-item">
+                            <div class="gallery__grid-inner">
+                                <div class="gallery__grid-image">
+                                    <img src="@item.ImageUrl5" alt="gallery image" class="m-3">
+                                    <a href="@item.ImageUrl5" data-rel="lightcase" class="gallery__view-btn">
+                                        <i class="fa-solid fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                }
                 </div>
-            </div>
-        }
-        
-    </div>
-</div>
+
+
+

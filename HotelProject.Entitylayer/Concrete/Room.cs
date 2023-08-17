@@ -20,6 +20,11 @@ namespace HotelProject.Entitylayer.Concrete
         public bool? Shower { get; set; }
         public int? PersonCount { get; set; }
         public string ImageUrl { get; set; }
+        public string ImageUrl1 { get; set; }
+        public string ImageUrl2 { get; set; }
+        public string ImageUrl3 { get; set; }
+        public string ImageUrl4 { get; set; }
+        public string ImageUrl5 { get; set; }
 
         public List<RoomDetail> RoomDetails { get; set; }
     }
