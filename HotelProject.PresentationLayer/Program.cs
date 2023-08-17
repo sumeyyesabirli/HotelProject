@@ -59,13 +59,13 @@ builder.Services.AddScoped<IUserDal, EfUserDal>();
 builder.Services.AddScoped<IGuestDal, EfGuestDal>();
 builder.Services.AddScoped<IGuestService, GuestManager>();
 
-builder.Services.AddMvc(config =>
-{
-    var policy = new AuthorizationPolicyBuilder()
-    .RequireAuthenticatedUser()
-    .Build();
-    config.Filters.Add(new AuthorizeFilter(policy));
-});
+//builder.Services.AddMvc(config =>
+//{
+//    var policy = new AuthorizationPolicyBuilder()
+//    .RequireAuthenticatedUser()
+//    .Build();
+//    config.Filters.Add(new AuthorizeFilter(policy));
+//});
 
 var app = builder.Build();
 

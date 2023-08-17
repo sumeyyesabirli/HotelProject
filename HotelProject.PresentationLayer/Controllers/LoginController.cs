@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HotelProject.PresentationLayer.Controllers
 {
-    [AllowAnonymous]
     public class LoginController : Controller
     {
         private readonly SignInManager<AppUser> _signInManager;

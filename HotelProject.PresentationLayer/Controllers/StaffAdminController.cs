@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HotelProject.PresentationLayer.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    
     public class StaffAdminController : Controller
     {
         private readonly IStaffService _staffService;

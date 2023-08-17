@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HotelProject.PresentationLayer.Controllers
 {
-    [AllowAnonymous]
+    
     public class RegisterController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
