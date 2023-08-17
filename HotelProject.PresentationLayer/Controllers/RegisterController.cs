@@ -1,11 +1,13 @@
 ﻿
 using HotelProject.Entitylayer.Concrete;
 using HotelProject.PresentationLayer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelProject.PresentationLayer.Controllers
 {
+    [AllowAnonymous]
     public class RegisterController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -30,12 +32,12 @@ namespace HotelProject.PresentationLayer.Controllers
 
             var appUser = new AppUser()
             {
-                Name =viewModel.Name,
+                Name = viewModel.Name,
                 Email = viewModel.Email,
                 Surname = viewModel.Surname,
-                UserName=viewModel.Username
-            
-             };
+                UserName = viewModel.Username
+
+            };
 
             var result = await _userManager.CreateAsync(appUser, viewModel.Password);
             if (result.Succeeded)

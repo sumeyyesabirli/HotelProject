@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Admin1Layout.cshtml";
 }
 
-<form method="post">
+<form method="post" enctype="multipart/form-data">
 
     <input type="hidden" asp-for="StaffId" />
     <label>Personel Adı</label>
@@ -22,6 +22,10 @@
     <label>Ünvan</label>
     <input type="text" asp-for="StaffTitle " class="form-control" />
     <br />
+    <label>Resim</label>
+    <input type="file" name="file" asp-for="ImageUrl" class="form-control" /><!-- Dosya yükleme alanı -->
+    <br />
+
     <button class="btn btn-success"> Personeli Güncelle </button>
 
 </form>

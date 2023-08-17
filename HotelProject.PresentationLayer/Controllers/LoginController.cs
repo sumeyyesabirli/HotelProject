@@ -2,15 +2,17 @@
 using HotelProject.DataAccessLayer.Concrete;
 using HotelProject.Entitylayer.Concrete;
 using HotelProject.PresentationLayer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace HotelProject.PresentationLayer.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
-       private readonly SignInManager<AppUser> _signInManager;
+        private readonly SignInManager<AppUser> _signInManager;
 
         public LoginController(SignInManager<AppUser> signInManager)
         {
@@ -23,17 +25,17 @@ namespace HotelProject.PresentationLayer.Controllers
             return View();
         }
         [HttpPost]
-     
+
         public async Task<IActionResult> Index(LoginViewModel model)
         {
-          if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                var result=await _signInManager.PasswordSignInAsync(model.Username,model.Password,true,true);
-                if(result.Succeeded)
+                var result = await _signInManager.PasswordSignInAsync(model.Username, model.Password, true, true);
+                if (result.Succeeded)
                 {
                     return RedirectToAction("Index", "StaffAdmin");
                 }
-               
+
             }
             return View();
         }
@@ -44,6 +46,4 @@ namespace HotelProject.PresentationLayer.Controllers
             return RedirectToAction("Index", "Login");
         }
     }
-
-  
 }

@@ -15,7 +15,7 @@ namespace HotelProject.PresentationLayer.Controllers
 
         public IActionResult Index()
         {
-            var values=_roomService.TGetList();
+            var values = _roomService.TGetList();
             return View(values);
         }
         [HttpGet]

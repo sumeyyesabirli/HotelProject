@@ -15,7 +15,7 @@ namespace HotelProject.PresentationLayer.Controllers
 
         public IActionResult Index()
         {
-            var values=_serviceService.TGetList();
+            var values = _serviceService.TGetList();
             return View(values);
         }
         [HttpGet]
@@ -24,8 +24,22 @@ namespace HotelProject.PresentationLayer.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult AddService(Service service)
+        public IActionResult AddService(Service service, IFormFile file)
         {
+            if (file != null && file.Length > 0)
+            {
+                string dosyaadi = Path.GetFileName(file.FileName);
+                string uzanti = Path.GetExtension(file.FileName);
+                string yol = Path.Combine("Images", dosyaadi); // Yol düzenlemesi
+                string fizikselYol = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", yol);
+
+                using (var stream = new FileStream(fizikselYol, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+                service.ServiceImageUrl = yol; // Görsel yolunu sakla
+            }
             _serviceService.TInsert(service);
             return RedirectToAction("Index");
         }
@@ -45,8 +59,22 @@ namespace HotelProject.PresentationLayer.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateService(Service service)
+        public IActionResult UpdateService(Service service, IFormFile file)
         {
+            if (file != null && file.Length > 0)
+            {
+                string dosyaadi = Path.GetFileName(file.FileName);
+                string uzanti = Path.GetExtension(file.FileName);
+                string yol = Path.Combine("Images", dosyaadi); // Yol düzenlemesi
+                string fizikselYol = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", yol);
+
+                using (var stream = new FileStream(fizikselYol, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+                service.ServiceImageUrl = yol; // Görsel yolunu sakla
+            }
             _serviceService.TUpdate(service);
             return RedirectToAction("Index");
         }

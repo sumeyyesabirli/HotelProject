@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace HotelProject.BusinessLayer.Abstract
 {
-    public interface IBookRoomService:IGenericService<BookRoom>
+    public interface IBookRoomService : IGenericService<BookRoom>
     {
+        void TBookingStatusChangeApproved(BookRoom bookRoom);
+        void TBookingStatusChangeApproved2(int id);
+        void TBookingWaitAdmin(int id);
     }
 }
