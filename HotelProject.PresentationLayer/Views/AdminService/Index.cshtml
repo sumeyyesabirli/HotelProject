@@ -11,7 +11,7 @@
         <th>#</th>
         <th>Hizmet Başlığı </th>
         <th>Hizmet İçeriği </th>
-        <th>Hizmet fotoğraf</th>
+      @*  <th>Hizmet fotoğraf</th>*@
         <th>Sil</th>
         <th>Güncelle</th>
 
@@ -24,7 +24,7 @@
             <th>@item.ServiceId</th>
             <th>@item.ServiceTitle</th>
             <th>@item.ServiceDescription</th>
-            <td><img src="~/@item.ServiceImageUrl" class="img-responsive img-thumbnail" style="max-width: 200px; max-height: 200px;" /></td>
+          @*  <td><img src="~/@item.ServiceImageUrl" class="img-responsive img-thumbnail" style="max-width: 200px; max-height: 200px;" /></td>*@
             <td><a href="/AdminService/DeleteService/@item.ServiceId" class="btn mb-1 btn-rounded btn-danger">Sil</a></td>
             <td><a href="/AdminService/UpdateService/@item.ServiceId," class="btn mb-1 btn-rounded btn-success">Güncelle</a></td>
         </tr>

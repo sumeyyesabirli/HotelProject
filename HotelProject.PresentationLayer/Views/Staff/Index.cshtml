@@ -60,7 +60,7 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-header__content">
-               
+
                     <p>
                         Ekip ruhuyla çalışan, misafir memnuniyetine odaklanmış ve her gün en iyisini sunmaya kararlı profesyonellerden oluşan bir ekibimiz var.
                     </p>
@@ -70,27 +70,27 @@
                 <div class="row g-4">
                     @foreach (var item in Model)
                     {
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="team__item2">
-                            <div class="team__item2-inner">
-                                <div class="team__item2-thumb">
-                                    <img src="@item.ImageUrl" alt="Team staff image">
-                                </div>
-                                <div class="team__item2-content">
-                                    <h3><a href="team-single.html">@item.StaffName</a></h3>
-                                    <p>@item.StaffTitle</p>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="team__item2">
+                                <div class="team__item2-inner">
+                                    <div class="team__item2-thumb">
+                                        <img src="~/@item.ImageUrl" class="img-responsive img-thumbnail" style="max-width: 200px; max-height: 200px;">
+                                    </div>
+                                    <div class="team__item2-content">
+                                        <h3><a href="team-single.html">@item.StaffName</a></h3>
+                                        <p>@item.StaffTitle</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     }
-                  
+
                 </div>
             </div>
         </div>
     </section>
 
-    
+
 
     <!-- ========== Team Section end Here========== -->
     <!-- ========== Footer Section start Here========== -->
