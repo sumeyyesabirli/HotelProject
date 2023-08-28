@@ -45,7 +45,7 @@
                     <ol class="breadcrumb justify-content-center mb-0">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                         <li class="breadcrumb-item"><a href="index.html">Pages</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Booking Form</li>
+                        <li class="breadcrumb-item active" aria-current="page">Rezervasyon</li>
                     </ol>
                 </nav>
             </div>
@@ -58,9 +58,8 @@
     <section class="booking padding-top padding-bottom">
         <div class="container">
             <div class="section-header">
-                <div class="section-header__content">
-                    <p class="subtitle">Stay With Us</p>
-                    <h2>Booking Form</h2>
+                <div class="section-header__content">                    
+                    <h2>Rezervasyon Yapın</h2>
                 </div>
             </div>
             <div class="booking__wrapper p-0">
@@ -96,7 +95,7 @@
                                     <div class="booking__form-inputgroup">
                                         <!-- <label for="input4" class="form-label">Mobile Number</label> -->
                                         <div class="booking__form-input">
-                                            <input type="text" class="form-control" placeholder="Phone Number" asp-for="PhoneNumber">
+                                            <input type="text" class="form-control" placeholder="Telefon Numarası" asp-for="PhoneNumber">
                                         </div>
                                     </div>
                                 </div>
@@ -104,7 +103,7 @@
                                     <div class="booking__form-inputgroup">
                                         <!-- <label for="input5" class="form-label">Adult</label> -->
                                         <select class="nice-selct wide form-select" aria-label="Default select example" asp-for="AdultCount">
-                                            <option selected>Adult</option>
+                                            <option selected>Yetişkin</option>
                                             <option value="10">01</option>
                                             <option value="1">02</option>
                                             <option value="2">03</option>
@@ -116,7 +115,7 @@
                                     <div class="booking__form-inputgroup">
                                         <!-- <label for="input6" class="form-label">Children</label> -->
                                         <select class="nice-selct wide form-select" aria-label="Default select example" asp-for="ChildCount">
-                                            <option selected>Children</option>
+                                            <option selected>Çocuk</option>
                                             <option value="0">01</option>
                                             <option value="1">02</option>
                                             <option value="2">03</option>
@@ -128,7 +127,7 @@
                                     <div class="booking__form-inputgroup">
                                         <!-- <label for="input7" class="form-label">Room</label> -->
                                         <select class="nice-selct wide form-select" aria-label="Default select example" asp-for="RoomCount">
-                                            <option selected>Room</option>
+                                            <option selected>Oda</option>
                                             <option value="0">TERAS SUİT</option>
                                             <option value="1">DUBLEX SUİT</option>
                                             <option value="2">LUX ODA</option>
@@ -140,10 +139,10 @@
                                     <div class="booking__form-inputgroup">
                                         <!-- <label for="input8" class="form-label">Children</label> -->
                                         <select class="nice-selct wide form-select" aria-label="Default select example" asp-for="RoomType">
-                                            <option selected>Room Type</option>
-                                            <option value="1">Delux</option>
-                                            <option value="2">Family</option>
-                                            <option value="3">Couple</option>
+                                            <option selected>Oda Tipi</option>
+                                            <option value="1">Lüks</option>
+                                            <option value="2">Aile</option>
+                                            <option value="3">Çift</option>
                                         </select>
                                     </div>
                                 </div>
@@ -151,7 +150,7 @@
                                     <div class="booking__form-inputgroup">
                                         <!-- <label for="input9" class="form-label">Check In</label> -->
                                         <div class="booking__form-date">
-                                            <input type="datetime" class="date-input form-control" placeholder="Check In" asp-for="CheckIn">
+                                            <input type="datetime" class="date-input form-control" placeholder="Giriş" asp-for="CheckIn">
                                         </div>
                                     </div>
                                 </div>
@@ -161,7 +160,7 @@
                                     <div class="booking__form-inputgroup">
                                         <!-- <label for="input10" class="form-label">Check Out</label> -->
                                         <div class="booking__form-date">
-                                            <input type="date" class="date-input form-control" placeholder="Check Out" asp-for="CheckOut">
+                                            <input type="date" class="date-input form-control" placeholder="Çıkış" asp-for="CheckOut">
                                         </div>
                                     </div>
                                 </div>
@@ -170,14 +169,14 @@
                                     <div class="booking__form-inputgroup">
                                         <!-- <label for="input11" class="form-label">Special Note</label> -->
                                         <div class="booking__form-input">
-                                            <textarea class="form-control textarea" placeholder="Special Notes..." asp-for="SpecialNote"> </textarea>
+                                            <textarea class="form-control textarea" placeholder="Bize Not Bırakın..." asp-for="SpecialNote"> </textarea>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="booking__form-btn mt-2">
-                                        <button class="custom-btn custom-btn--fluid"><span>Book Now</span></button>
+                                        <button class="custom-btn custom-btn--fluid"><span>Rezervasyon Oluşturun</span></button>
                                     </div>
                                 </div>
                             </div>
